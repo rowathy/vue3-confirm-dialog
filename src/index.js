@@ -1,10 +1,15 @@
-import ConfirmDialog from "./components/ConfirmDialog.vue";
-import events  from "./events.js";
+import Vue3ConfirmDialog from "./components/ConfirmDialog.vue";
+import mitt from "mitt";
 
+const emitter = mitt();
 export default {
-    install: (app, options) => {
-    
-        app.component("Vue3ConfirmDialog", ConfirmDialog);
+    install: (app, args = {}) => {
+      if (this.installed) return
+
+        this.installed = true
+        this.params = args
+
+        app.component(args.componentName || "vue3-confirm-dialog", Vue3ConfirmDialog)
     
         const confirm = params => {
           if (typeof params != "object" || Array.isArray(params)) {
@@ -26,14 +31,17 @@ export default {
                 `Callback type must be an function. Caught: ${callbackType}. Expected: function`
               )
             }
-            events.$emit("open", params)
+            console.log(params);
+            emitter.emit("open", params)
           }
         }
+
         confirm.close = () => {
-          events.$emit("close")
+          emitter.emit("close")
         }
     
-        app.config.globalProperties.$confirm = confirm
-        app["$confirm"] = confirm
+        app.config.globalProperties.$confirm = confirm;
+
+        app["$confirm"] = confirm;
     }
 }

@@ -55,7 +55,8 @@
 
 <script>
 import { createApp } from "vue";
-import events  from "../events.js";
+import mitt from "mitt";
+const emitter = mitt();
 
 const app = createApp({})
 
@@ -131,10 +132,10 @@ const Vue3DialogConfirm = {
   },
   mounted() {
     if (!document) return
-      events.$on("open", this.open)
-      events.$on("close", () => {
-        this.handleClickOverlay({ target: { id: "vueConfirm" } })
-      })
+    emitter.on("open", this.open)
+    emitter.on("close", () => {
+      this.handleClickOverlay({ target: { id: "vueConfirm" } })
+    });
   },
 }
 
