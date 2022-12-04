@@ -1,0 +1,32 @@
+{
+  "name": "vue3-confirm-dialog",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/vue3-confirm-dialog.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue3-confirm-dialog.js",
+      "require": "./dist/vue3-confirm-dialog.umd.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vue": "^3.2.41"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.2.0",
+    "vite": "^3.2.3"
+  },
+  "keywords": [
+    "vue3",
+    "confirm",
+    "dialog",
+    "popup"
+  ],
+  "license": "MIT"
+}
