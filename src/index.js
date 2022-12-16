@@ -1,7 +1,6 @@
-import Vue3ConfirmDialog from "./components/ConfirmDialog.vue";
-import mitt from "mitt";
+import Vue3ConfirmDialog from "./components/Vue3ConfirmDialog.vue";
+import event from './event.js';
 
-const emitter = mitt();
 export default {
     install: (app, args = {}) => {
       if (this.installed) return
@@ -31,14 +30,13 @@ export default {
                 `Callback type must be an function. Caught: ${callbackType}. Expected: function`
               )
             }
-            console.log(params);
-            emitter.emit("open", params)
+            event.emit("open", params);
           }
         }
 
-        confirm.close = () => {
-          emitter.emit("close")
-        }
+        // confirm.close = () => {
+        //   emitter.emit("close")
+        // }
     
         app.config.globalProperties.$confirm = confirm;
 
