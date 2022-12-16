@@ -1,4 +1,4 @@
-class Event{
+class Event {
     constructor(){
         this.events = {};
     }

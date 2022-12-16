@@ -34,9 +34,9 @@ export default {
           }
         }
 
-        // confirm.close = () => {
-        //   emitter.emit("close")
-        // }
+        confirm.close = () => {
+          event.emit("close")
+        }
     
         app.config.globalProperties.$confirm = confirm;
 
