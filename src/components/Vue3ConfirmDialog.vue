@@ -56,8 +56,15 @@
 <script>
 import event from '../event.js';
 
+const focus = {
+  mounted: (el) => el.focus()
+}
+
 const Vue3DialogConfirm = {
   name: "Vue3ConfirmDialog",
+    directives: {
+    focus
+  },
   data() {
     return {
       isShow: false,
