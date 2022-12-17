@@ -1,4 +1,4 @@
-# vue-confirm-dialog
+# vue3-confirm-dialog
 
 Simple Confirm Dialog verification plugin with Vue.js.
 
