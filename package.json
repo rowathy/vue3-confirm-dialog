@@ -1,6 +1,6 @@
 {
   "name": "vue3-confirm-dialog",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "main": "dist/vue3-confirm-dialog.js",
   "exports": {
