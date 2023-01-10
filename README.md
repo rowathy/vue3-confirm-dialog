@@ -1,10 +1,10 @@
 # vue3-confirm-dialog
 
-Simple Confirm Dialog verification plugin with Vue.js.
+Simple Confirm Dialog verification plugin with Vue 3.
 
 Demo: https://github.com/rowathy/vue3-confirm-dialog
 
-![confirm-dialog](https://raw.githubusercontent.com/aslanon/vue-confirm-dialog/master/example/src/static/confirm-dialog.png)
+![confirm-dialog](https://raw.githubusercontent.com/rowathy/vue3-confirm-dialog/main/src/assets/confirm-dialog.png)
 
 
 ## Install
