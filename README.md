@@ -22,8 +22,10 @@ import { createApp } from 'vue';
 import Vue3ConfirmDialog from 'vue3-confirm-dialog'
 import 'vue3-confirm-dialog/dist/style.css'
 
-Vue.use(Vue3ConfirmDialog);
-Vue.component('vue-confirm-dialog', Vue3ConfirmDialog.default)
+const app = createApp();
+
+app.use(Vue3ConfirmDialog);
+app.component('vue3-confirm-dialog', Vue3ConfirmDialog.default)
 ```
 In App.vue (or in the template file for Nuxt.js (layout/default.vue)):
 
