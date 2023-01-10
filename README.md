@@ -6,8 +6,6 @@ Demo: https://github.com/rowathy/vue3-confirm-dialog
 
 ![confirm-dialog](https://raw.githubusercontent.com/aslanon/vue-confirm-dialog/master/example/src/static/confirm-dialog.png)
 
-![vue-confirm](https://media.giphy.com/media/KzDUV51RkigyVBsJgA/giphy.gif)
-
 
 ## Install
 
