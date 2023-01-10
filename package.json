@@ -5,6 +5,7 @@
   "main": "dist/vue3-confirm-dialog.js",
   "exports": {
     ".": {
+      "css": "./dist/style.css",
       "import": "./dist/vue3-confirm-dialog.js",
       "require": "./dist/vue3-confirm-dialog.umd.cjs"
     }
@@ -30,5 +31,6 @@
     "dialog",
     "popup"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "homepage": "https://github.com/rowathy/vue3-confirm-dialog#readme"
 }
