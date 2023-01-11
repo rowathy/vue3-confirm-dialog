@@ -71,32 +71,6 @@ methods: {
   }
 ```
 
-If you want to use in \*.js file (e.g Vuex Store) before import Vue and after use Vue.\$confirm.
-
-```js
-import Vue from 'vue'
-
-export default {
-  namespaced: true,
-  state: {},
-  actions: {
-    logout({ commit }) {
-      Vue.$confirm({
-        title: 'Are you sure?',
-        message: 'Are you sure you want to logout?',
-        button: {
-          yes: 'Yes',
-          no: 'Cancel'
-        },
-        callback: confirm => {
-          // ...do something
-        }
-      })
-    }
-  }
-}
-```
-
 ## Use only for information
 
 If you want to use only for information and you want of see one button in dialog, you can use only one of 'no' or 'yes' button object.
