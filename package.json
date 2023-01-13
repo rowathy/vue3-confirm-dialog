@@ -7,7 +7,8 @@
     ".": {
       "import": "./dist/vue3-confirm-dialog.js",
       "require": "./dist/vue3-confirm-dialog.umd.cjs"
-    }
+    },
+    "./style" : "./dist/style.css"
   },
   "files": [
     "dist"
