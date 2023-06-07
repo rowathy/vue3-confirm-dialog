@@ -6,7 +6,6 @@ Demo: https://github.com/rowathy/vue3-confirm-dialog
 
 ![confirm-dialog](https://raw.githubusercontent.com/rowathy/vue3-confirm-dialog/main/src/assets/confirm-dialog.png)
 
-
 ## Install
 
 ```bash
@@ -27,6 +26,7 @@ const app = createApp();
 app.use(Vue3ConfirmDialog);
 app.component('vue3-confirm-dialog', Vue3ConfirmDialog.default)
 ```
+
 In App.vue (or in the template file for Nuxt.js (layout/default.vue)):
 
 ```html
@@ -39,8 +39,8 @@ In App.vue (or in the template file for Nuxt.js (layout/default.vue)):
 
 <script>
   export default {
-    name: 'app'
-  }
+    name: "app",
+  };
 </script>
 ```
 
@@ -69,6 +69,42 @@ methods: {
       )
     }
   }
+```
+
+With script setup vue composition api
+
+```html
+<template>
+  <div id="app">
+    <vue3-confirm-dialog ref="modalConfirm"></vue3-confirm-dialog>
+    <button @click="showModal">Show Modal</button>
+    <!-- your code -->
+  </div>
+</template>
+
+<script setup>
+  import { ref } from "vue";
+
+  const modalConfirm = ref(null);
+  //to access template modal using ref since this is not there
+  //will automatically be assigned to template onmount
+
+  const showModal = () => {
+    modalConfirm.value.open({
+      message: "Are you sure?",
+      button: {
+        no: "No",
+        yes: "Yes",
+      },
+
+      callback: (confirm) => {
+        if (confirm) {
+          // ... do something
+        }
+      },
+    });
+  };
+</script>
 ```
 
 ## Use only for information
